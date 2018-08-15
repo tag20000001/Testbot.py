@@ -187,4 +187,4 @@ async def unban(ctx):
         await bot.say('unban failed.')
         return
 
-bot.run("NDUxMjk4NTQxMTU2MTcxNzg2.DlX-FQ.--AmlhmRZX9OrUYXcuLo6p")
+bot.run("")
