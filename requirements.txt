@@ -1,4 +1,5 @@
 discord.py
 discord.py[voice]
+pyNaCl
 asyncio
 Status
