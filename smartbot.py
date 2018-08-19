@@ -4,6 +4,7 @@ from discord.ext.commands import bot
 from discord.ext import commands
 import platform
 import time
+import os
 import logging
 print('=========================================')
 print('#Information: ')
@@ -187,4 +188,4 @@ async def unban(ctx):
         await bot.say('unban failed.')
         return
 
-bot.login(process.env('Token'))
+bot.login(os.getenv('Token'))
