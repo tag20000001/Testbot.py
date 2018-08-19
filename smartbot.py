@@ -187,4 +187,4 @@ async def unban(ctx):
         await bot.say('unban failed.')
         return
 
-bot.run("")
+client.run(os.getenv('Token'))
