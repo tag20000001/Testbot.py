@@ -1,2 +1,1 @@
-worker: python smartbot.py
-worker: python chat.py
+worker: python smart2bot.py
