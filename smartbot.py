@@ -187,5 +187,19 @@ async def unban(ctx):
     except discord.HTTPException:
         await bot.say('unban failed.')
         return
+#getbans command
 
+@bot.command(pass_context=True)  
+@commands.has_permissions(ban_members=True)		 		      	 		 		
+async def bans(ctx):
+    ban_list = await bot.get_bans(ctx.message.server)
+
+    # Show banned users
+    await bot.say("Ban list:\n{}".format("\n".join([user.name for user in ban_list])))
+
+    
+    if not ban_list:
+    	
+        await bot.say('Ban list is empty.')
+        return     
 bot.run(os.getenv('Token'))
