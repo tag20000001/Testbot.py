@@ -199,6 +199,7 @@ async def on_message(message):
     if message.content.startswith('Hi'):
     	await bot.send_message(message.channel,embed=discord.Embed(title='Hello '+user,color=0x00ff00))
     if message.content.startswith('Hello'):
-    	await bot.send_message(message.channel,embed=discord.Embed(title='Hello '+user,color=0x00ff00))  
+    	await bot.send_message(message.channel,embed=discord.Embed(title='Hello '+user,color=0x00ff00))
+	return
 
 bot.run(os.getenv('Token'))
