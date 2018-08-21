@@ -5,6 +5,7 @@ from discord.ext import commands
 import platform
 import os
 import time
+bot = commands.Bot(command_prefix='.')
 
 
 	
