@@ -56,7 +56,4 @@ async def on_message(message):
     	await bot.send_message(message.channel,embed=discord.Embed(title='Hello '+user,color=0x00ff00))    	    	
 		
 		
-
-
-
-
+bot.run(os.getenv('Token'))
