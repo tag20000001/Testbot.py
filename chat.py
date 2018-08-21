@@ -6,17 +6,7 @@ import platform
 import os
 import time
 
-print('=========================================')
-print('#Information: ')
 
-
-bot = commands.Bot(command_prefix='.')
-
-@bot.event
-async def on_ready():
-	print('============================================================================')
-	print ('I am online.')
-	print('I am running as ' + bot.user.name+',''with the ID:' + bot.user.id+' and I am connected in '+str(len(bot.servers))+' servers.'' I am connected with '+str(len(set(bot.get_all_members())))+' members')
 	
 #Common Messages
 
@@ -67,6 +57,6 @@ async def on_message(message):
 		
 		
 
-bot.run(os.getenv('Token'))
+
 
 
