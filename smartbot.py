@@ -187,7 +187,7 @@ async def unban(ctx):
     except discord.HTTPException:
         await bot.say('unban failed.')
         return
- @bot.event
+@bot.event
 async def on_message(message):
     if message.author == bot.user:
         return
