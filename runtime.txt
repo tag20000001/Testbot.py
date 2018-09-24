@@ -1,1 +1,2 @@
-python-3.6.6
+python-3.6.5
+opus-3.0.1
