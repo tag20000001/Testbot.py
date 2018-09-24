@@ -4,3 +4,4 @@ pyNaCl
 asyncio
 Status
 opuslib
+opus-api
