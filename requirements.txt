@@ -5,4 +5,4 @@ asyncio
 Status
 opuslib
 opus-api
-opuslib-3.0.1
+opuslib-3.0.1.tar
