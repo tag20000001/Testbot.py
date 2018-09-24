@@ -6,7 +6,7 @@ import platform
 import time
 import os
 import logging
-import youtube-dl
+import youtube_dl
 print('=========================================')
 print('#Information: ')
 logging.basicConfig(level=logging.INFO)
