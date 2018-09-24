@@ -5,4 +5,4 @@ asyncio
 Status
 opuslib
 opus-api
-
+youtube-dl
