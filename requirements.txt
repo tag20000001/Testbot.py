@@ -3,4 +3,4 @@ discord.py[voice]
 pyNaCl
 asyncio
 Status
-Opuslib
+opuslib
