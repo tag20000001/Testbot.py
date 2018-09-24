@@ -6,7 +6,7 @@ import platform
 import time
 import os
 import logging
-import Opuslib
+import opuslib
 print('=========================================')
 print('#Information: ')
 logging.basicConfig(level=logging.INFO)
