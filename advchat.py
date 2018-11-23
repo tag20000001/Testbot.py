@@ -26,5 +26,6 @@ async def on_message(message):
     	await bot.send_message(message.channel,embed=discord.Embed(title=random.choice(greetmsg)+user,color=0x00ff00))
     if message.content.startswith('Bye')or message.content.startswith("bye")or message.content.endswith("Bye")or message.content.endswith("bye"):
     	await bot.send_message(message.channel,embed=discord.Embed(title='Bye '+user,color=0x00ff00))    	    	
-		
+
+bot.run(os.getenv('Token'))
 		
