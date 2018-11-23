@@ -6,9 +6,18 @@ from discord.ext import commands
 import platform
 import time
 import os
+import logging
+print('=========================================')
+print('#Information: ')
+logging.basicConfig(level=logging.INFO)
+
+bot = commands.Bot(command_prefix='.')
+
 @bot.event
 async def on_ready():
-	print("chat.py is on")
+	print('=========================================')
+	
+	print('advchat.py is on')
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
