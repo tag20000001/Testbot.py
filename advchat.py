@@ -26,7 +26,9 @@ async def on_message(message):
     hlo ='Hello!  {0.author}'.format(message)
     greetmsg=["Hi ","Hello ","Hey ","Yo "]
     usergreet=["Hi" or "Hello" or "Hey" or "Yo"]
-    
+    ht=["Fine","Well","Felling little tired","Good"]
+	
+	
     if message.content.startswith("."):
     	return
      
