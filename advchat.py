@@ -35,9 +35,12 @@ async def on_message(message):
     	await bot.send_message(message.channel,embed=discord.Embed(title=random.choice(greetmsg)+user,color=0x00ff00))
     if message.content.startswith('Bye')or message.content.startswith("bye")or message.content.endswith("Bye")or message.content.endswith("bye"):
     	await bot.send_message(message.channel,embed=discord.Embed(title='Bye '+user,color=0x00ff00))    	    	
-
-    if message.content.startswith("how are you?")or message.content.startswith("how are you")or message.content.startswith("How are you?")or message.content.startswith("How are you")or message.content.startswith("how r u?")message.content.startswith("how are you?")or message.content.endswith("how are you")or message.content.endswith("How are you?")or message.content.endswith("How are you")or message.content.endswith("how r u?"):
-    	await  bot.send_message(message.channel,embed=discord.Embed(title=random.choice(slfinf)+user,color=0x00ff00))
-    	return    	   	
+    	return
+    if message.content.startswith("how are you?")or message.content.startswith("How r u?")or message.content.startswith("how are you")or message.content.startswith("How are you?")or message.content.startswith("How are you")or message.content.startswith("how r u?")or message.content.endswith("how are you")or message.content.endswith("How are you?")or message.content.endswith("How are you?")or message.content.endswith("How r u?")or message.content.endswith("How are you")or message.content.endswith("how r u?"):
+    		await bot.send_message(message.channel,embed=discord.Embed(title=random.choice(ht)+user,color=0x00ff00))
+    	
+    		
+    		return   
+      	   	
 bot.run(os.getenv('Token'))
 		
