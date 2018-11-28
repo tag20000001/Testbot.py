@@ -219,6 +219,7 @@ async def leave(ctx):
     await voice_client.disconnect(vc)
     await voice_client.disconnect()
     await bot.join_voice_channel(vc)
+    await voice_client.disconnect()
     return
 
 bot.run(os.getenv('Token'))
