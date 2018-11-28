@@ -216,8 +216,8 @@ async def leave(ctx):
     author=ctx.message.author
     vc=author.voice_channel
     voice_client=bot.voice_client_in(server)
+    await voice_client.disconnect(vc)
     await voice_client.disconnect()
-    
     await bot.join_voice_channel(vc)
     return
 
