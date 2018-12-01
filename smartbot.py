@@ -1,5 +1,5 @@
 import discord
-import opus-lib 
+
 import opus
 import asyncio
 from discord.ext.commands import bot
