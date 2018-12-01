@@ -1,6 +1,6 @@
 import discord
 
-import opus-api
+
 import asyncio
 from discord.ext.commands import bot
 from discord.ext import commands
@@ -244,7 +244,8 @@ async def go(ctx):
     return
 
 @bot.command(pass_context=True)
-async def play(ctx): 
+async def play(ctx):
+    opus.load_opus()
     url='https://www.youtube.com/watch?v=rPOUewuNKFE'
     author=ctx.message.author
     voice_channel=author.voice_channel
