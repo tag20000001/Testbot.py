@@ -1,6 +1,6 @@
 import discord
 
-import opuslib
+import opus-api
 import asyncio
 from discord.ext.commands import bot
 from discord.ext import commands
