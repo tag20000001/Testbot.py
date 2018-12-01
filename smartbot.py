@@ -241,13 +241,13 @@ async def go(ctx):
     await voice_client.disconnect()
     return
 
-@client.command(pass_context=True)
-async def yt(ctx): 
+@bot.command(pass_context=True)
+async def play(ctx): 
     url='https://www.youtube.com/watch?v=rPOUewuNKFE'
     author=ctx.message.author
     voice_channel=author.voice_channel
     vc=author.voice_channel
-    await client.join_voice_channel(voice_channel)
+    await bot.join_voice_channel(voice_channel)
     player=await vc.create_ytdl_player(url)
     player.start()
 
