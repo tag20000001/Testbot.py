@@ -230,4 +230,13 @@ async def leave(ctx):
     await voice_client.disconnect()
     return
 
+
+@bot.command(pass_context=True)
+async def go(ctx):
+    server=ctx.message.server
+    author=ctx.message.author
+    vc=author.voice_channel
+    voice_client=bot.voice_client_in(server)
+    await voice_client.bot.disconnect()
+
 bot.run(os.getenv('Token'))
