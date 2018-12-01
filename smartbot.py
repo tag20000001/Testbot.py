@@ -205,53 +205,56 @@ async def bans(ctx):
     	
         await bot.say('Ban list is empty.')
         return 
+#join command
+
 @bot.command(pass_context=True)
 async def join(ctx):
-    author=ctx.message.author
-    vc=author.voice_channel
-    await bot.join_voice_channel(vc)
-    return
+	
+	
+    if ctx.message.author.server_permissions.kick_members:
+        author=ctx.message.author
+        vc=author.voice_channel  
+    try:	
+    	
+    	await bot.join_voice_channel(vc)
+    	await bot.say('✅connected to voice channel ')
+    	return
+	 
+    except discord.Forbidden:
+        await bot.say(embed=Forbidden)
+        return
+    except discord.InvalidArgument:
+        await bot.say('Please join voice channel to hear music ')
+        return
+    except discord.HTTPException:
+        await bot.say('join failed.')
+        return		 	
+
+
+#leave command
 
 @bot.command(pass_context=True)
 async def leave(ctx):
-    server=ctx.message.server
-    author=ctx.message.author
-    vc=author.voice_channel
-    voice_client=bot.voice_client_in(server)
-    await bot.join_voice_channel(vc)
-    await bot.join_voice_channel(vc)
-    await voice_client.disconnect(vc)
-    await voice_client.disconnect()
-    await bot.join_voice_channel(vc)
-    await voice_client.disconnect()
-    await voice_client.disconnect(vc)
-    await voice_client.disconnect()
-    await bot.join_voice_channel(vc)
-    await voice_client.disconnect()
-    await voice_client.disconnect()
-    await voice_client.disconnect()
-    return
+    if ctx.message.author.server_permissions.kick_members:
+        author=ctx.message.author
+        vc=author.voice_channel  
+    try:
+    	await bot.say('✅Disconnecting from voice channel in 8 sec ')
+    	await bot.join_voice_channel(vc)
+    	await voice_client.disconnect()
+    	return
+	 
+    except discord.Forbidden:
+        await bot.say(embed=Forbidden)
+        return
+    except discord.InvalidArgument:
+        await bot.say('Please join voice channel to hear music')
+        return
+    except discord.HTTPException:
+        await bot.say('leave failed.')
+        return		 
 
 
-@bot.command(pass_context=True)
-async def go(ctx):
-    server=ctx.message.server
-    author=ctx.message.author
-    vc=author.voice_channel
-    voice_client=bot.voice_client_in(server)
-    await bot.join_voice_channel(vc)
-    await voice_client.disconnect()
-    return
-
-@bot.command(pass_context=True)
-async def play(ctx):
-    opus.load_opus()
-    url='https://www.youtube.com/watch?v=rPOUewuNKFE'
-    author=ctx.message.author
-    voice_channel=author.voice_channel
-    vc=author.voice_channel
-    await bot.join_voice_channel(voice_channel)
-    player=await vc.create_ytdl_player(url)
-    player.start()
+    
 
 bot.run(os.getenv('Token'))
