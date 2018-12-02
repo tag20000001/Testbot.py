@@ -217,7 +217,7 @@ async def join(ctx):
     try:	
     	
     	await bot.join_voice_channel(vc)
-    	await bot.say('✅connected to voice channel ')
+    	await bot.say('✅connected to voice channel')
     	return
 	 
     except discord.Forbidden:
