@@ -6,4 +6,4 @@ Status
 opuslib
 opus-api
 youtube-dl
-libopus
+
