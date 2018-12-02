@@ -205,56 +205,5 @@ async def bans(ctx):
     	
         await bot.say('Ban list is empty.')
         return 
-#join command
-
-@bot.command(pass_context=True)
-async def join(ctx):
-	
-	
-    if ctx.message.author.server_permissions.kick_members:
-        author=ctx.message.author
-        vc=author.voice_channel  
-    try:	
-    	await bot.say('✅connecting to voice channel')
-    	await bot.join_voice_channel(vc)
-    	
-    	return
-	 
-    except discord.Forbidden:
-        await bot.say(embed=Forbidden)
-        return
-    except discord.InvalidArgument:
-        await bot.say('Please join voice channel to hear music ')
-        return
-    except discord.HTTPException:
-        await bot.say('join failed.')
-        return		 	
-
-
-#leave command
-
-@bot.command(pass_context=True)
-async def leave(ctx):
-    if ctx.message.author.server_permissions.kick_members:
-        author=ctx.message.author
-        vc=author.voice_channel  
-    try:
-    	await bot.say('✅Disconnecting from voice channel in 8 sec ')
-    	await bot.join_voice_channel(vc)
-    	await voice_client.disconnect()
-    	return
-	 
-    except discord.Forbidden:
-        await bot.say(embed=Forbidden)
-        return
-    except discord.InvalidArgument:
-        await bot.say('Please join voice channel to hear music')
-        return
-    except discord.HTTPException:
-        await bot.say('leave failed.')
-        return		 
-
-
-    
 
 bot.run(os.getenv('Token'))
