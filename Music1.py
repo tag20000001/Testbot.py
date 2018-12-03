@@ -11,7 +11,6 @@ print('=========================================')
 print('Music.py is on')
 bot = commands.Bot(command_prefix='.')
 
-
 #join command
 @bot.command(pass_context=True)
 async def join(ctx):
@@ -43,20 +42,22 @@ async def join(ctx):
         return		 	
 
 
-#leave command
+		
+
+#Leave command
 @bot.command(pass_context=True)
 async def leave(ctx):
     if ctx.message.author.server_permissions.kick_members:
         author=ctx.message.author
-        vc=author.voice_channel  
+        server=ctx.message.server
+        vc=author.voice_channel
+        voice_client=bot.voice_client_in(server) 
     try:
     	msg=await bot.send_message(ctx.message.channel,'✅Disconnecting from voice channel in 8 sec ')
     	await asyncio.sleep(2)
     	await bot.delete_message(msg)
     	await bot.delete_message(ctx.message)
-    	await bot.join_voice_channel(vc)
-    	
-    	await voice_client.disconnect()
+    	await bot.join_voice_channel(vc)	
     	return
 	 
     except discord.Forbidden:
@@ -69,21 +70,6 @@ async def leave(ctx):
         return
     except discord.HTTPException:
         await bot.say('leave failed.')
-        return	
-
-
-@bot.command(name='joinvoice',pass_context=True)
-async def joinvoice(ctx):
-    #"""Joins your voice channel"""
-    author = ctx.message.author
-    voice_channel = author.voice_channel
-    vc = await bot.join_voice_channel(voice_channel)
-@bot.command(name='lv',pass_context=True)
-async def lv(ctx):
-    for x in bot.voice_clients:
-        if (x.server == ctx.message.server):
-            await x.disconnect()
-        else:
-        	return await bot.say("I am not connected to any voice channel on this server!")          
+        return		
 
 bot.run(os.getenv('Token'))
