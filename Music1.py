@@ -78,8 +78,8 @@ async def joinvoice(ctx):
     author = ctx.message.author
     voice_channel = author.voice_channel
     vc = await bot.join_voice_channel(voice_channel)
-@bot.command(pass_context=True)
-async def leavevoice(ctx):
+@bot.command(name='lv',pass_context=True)
+async def lv(ctx):
     for x in bot.voice_clients:
         if (x.server == ctx.message.server):
             await x.disconnect()
