@@ -69,7 +69,21 @@ async def leave(ctx):
         return
     except discord.HTTPException:
         await bot.say('leave failed.')
-        return		
+        return	
 
+
+@bot.command(name='joinvoice',pass_context=True)
+async def joinvoice(ctx):
+    #"""Joins your voice channel"""
+    author = ctx.message.author
+    voice_channel = author.voice_channel
+    vc = await bot.join_voice_channel(voice_channel)
+@bot.command(pass_context=True)
+async def leavevoice(ctx):
+    for x in bot.voice_clients:
+        if (x.server == ctx.message.server):
+            await x.disconnect()
+        else:
+        	return await bot.say("I am not connected to any voice channel on this server!")          
 
 bot.run(os.getenv('Token'))
