@@ -3,6 +3,7 @@ import random
 import asyncio
 from discord.ext.commands import bot
 from discord.ext import commands
+from discord.utils import get
 import platform
 import time
 import os
@@ -16,8 +17,9 @@ bot = commands.Bot(command_prefix='.')
 @bot.event
 async def on_ready():
 	print('=========================================')
-	
 	print('advchat.py is on')
+
+	
 #new improved chat
 @bot.event
 async def on_message(message):
@@ -47,9 +49,7 @@ async def on_message(message):
 	elif 'Not fine' in message.content or 'not fine' in message.content or 'Not well' in message.content or 'not well' in message.content or 'Not good' in message.content or 'not good' in message.content or 'tired' in message.content or 'Tired' in message.content or 'sick' in message.content or 'Sick' in message.content:
 		await bot.add_reaction(message,'😔')
 
-    	
-    		
-    
+      
       	   	
 bot.run(os.getenv('Token'))
-		
+	
