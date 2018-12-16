@@ -19,7 +19,6 @@ async def on_ready():
 	print('=========================================')
 	print('advchat.py is on')
 
-	
 #new improved chat
 @bot.event
 async def on_message(message):
@@ -45,14 +44,21 @@ async def on_message(message):
 	elif 'Not fine' in message.content or 'not fine' in message.content or 'Not well' in message.content or 'not well' in message.content or 'Not good' in message.content or 'not good' in message.content or 'tired' in message.content or 'Tired' in message.content or 'sick' in message.content or 'Sick' in message.content:
 		await bot.add_reaction(message,'😔')
 		return
-		
+
 	
 	elif 'fine' in message.content or 'Fine' in message.content or 'well' in message.content or 'Well' in message.content or 'good' in message.content or 'Good' in message.content:
 		await bot.add_reaction(message,'👍')
 		return
 	
-	
+
     
 
  bot.run(os.getegetenvnv('Token'))   
+    	  	
+
+	
+
+    
+
+ 
     	  	
