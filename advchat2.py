@@ -42,13 +42,16 @@ async def on_message(message):
 	elif 'how are you' in message.content or 'How are you' in message.content or 'how r u' in message.content or 'How r u' in message.content:
 		msg = await  bot.send_message(message.channel,embed=discord.Embed(title=random.choice(msghru)+user+'? ',color=0x00ff00))
 		return
+	elif 'Not fine' in message.content or 'not fine' in message.content or 'Not well' in message.content or 'not well' in message.content or 'Not good' in message.content or 'not good' in message.content or 'tired' in message.content or 'Tired' in message.content or 'sick' in message.content or 'Sick' in message.content:
+		await bot.add_reaction(message,'😔')
+		return
+		
 	
 	elif 'fine' in message.content or 'Fine' in message.content or 'well' in message.content or 'Well' in message.content or 'good' in message.content or 'Good' in message.content:
 		await bot.add_reaction(message,'👍')
+		return
 	
-	elif 'Not fine' in message.content or 'not fine' in message.content or 'Not well' in message.content or 'not well' in message.content or 'Not good' in message.content or 'not good' in message.content or 'tired' in message.content or 'Tired' in message.content or 'sick' in message.content or 'Sick' in message.content:
-		await bot.add_reaction(message,'😔')
-
+	
     
 
  bot.run(os.getegetenvnv('Token'))   
