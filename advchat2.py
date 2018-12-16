@@ -53,7 +53,7 @@ async def on_message(message):
 
     
 
- bot.run(os.getegetenvnv('Token'))   
+bot.run(os.getegetenvnv('Token'))   
     	  	
 
 	
