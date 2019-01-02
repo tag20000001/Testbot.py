@@ -274,6 +274,9 @@ async def leave(ctx):
         return
     except discord.HTTPException:
         await bot.say('leave failed.')
-        return		
+        return
+@bot.command(pass_context=True)
+async def invite(ctx):
+	await bot.say(embed=discord.Embed(title="Invite bot from here :",description="Click Here https://discordapp.com/api/oauth2/authorize?client_id=450220085676605441&permissions=8&scope=bot", color=0x00ff00))
 
 bot.run(os.getenv('Token'))
