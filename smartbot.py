@@ -277,6 +277,6 @@ async def leave(ctx):
         return
 @bot.command(pass_context=True)
 async def invite(ctx):
-	await bot.say(embed=discord.Embed(title="Invite bot from here :https://discordapp.com/api/oauth2/authorize?client_id=556485152486981642&permissions=8&scope=bot", color=0x00ff00))
+	await bot.say(embed=discord.Embed(title="Invite bot from here : \n https://discordapp.com/api/oauth2/authorize?client_id=556485152486981642&permissions=8&scope=bot", color=0x00ff00))
 
 bot.run(os.getenv('Token'))
