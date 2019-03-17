@@ -284,5 +284,5 @@ embed.add_field(name="Click here", value="https://discordapp.com/api/oauth2/auth
 @bot.command(pass_context=True)
 async def inv(ctx):
 	await bot.say(embed=embed)
-	return.
+	return
 bot.run(os.getenv('Token'))
