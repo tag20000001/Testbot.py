@@ -40,11 +40,12 @@ msg=('==>')
 #say command
 @bot.command(pass_context = True)
 async def say(ctx, *, msg = None):
-    await bot.delete_message(ctx.message)
-
-    if not msg: await bot.say("Please specify a message to send")
-    else: await bot.say(msg)
-    return
+	speech= discord.Embed(title=" ", description=msg,color=0x00ff00)
+	await bot.delete_message(ctx.message)
+	if not msg: await bot.say("Please specify a message to send")
+	else: await bot.say(embed=speech)
+	return
+    
     
     															
     																																													
@@ -52,7 +53,7 @@ async def say(ctx, *, msg = None):
 @bot.command(pass_context=True)  
 @commands.has_permissions(kick_members=True)     
 async def kick(ctx,user:discord.Member):
-	
+
     if ctx.message.author.server_permissions.kick_members: 
        
         
@@ -60,15 +61,18 @@ async def kick(ctx,user:discord.Member):
    
         
     try:
-        await bot.kick(user) 
-        await bot.say(user.name+' was kicked✅  Good bye '+user.name+'!')
-	 
+        await bot.kick(user)
+        msg=user.name+' was kicked ✅  Good bye '+user.name+'!'
+        msg_embed=discord.Embed(title="Kicked User <@"+user.id+">", description=msg,color=0x00ff00)
+        await bot.say(embed=msg_embed)
+
     except discord.Forbidden:
         await bot.say(embed=Forbidden)
         return
     except discord.HTTPException:
         await bot.say('kick failed.')
         return		 	
+
 
 
 #clear command
@@ -285,4 +289,15 @@ embed.add_field(name="Click here", value="https://discordapp.com/api/oauth2/auth
 async def inv(ctx):
 	await bot.say(embed=embed)
 	return
+#Shut down command
+@bot.command(pass_context=True)  
+@commands.has_permissions(ban_members=True)
+async def shutdown(ctx):
+	msg="Shut Down Success. /n Bye"
+	msg_embed=discord.Embed(title="Shutting down...", description=msg,color=0x00ff00)
+	await bot.say(embed=msg_embed)
+	await bot.say(embed=msg_embed)
+	await bot.close()
+	return
+      
 bot.run(os.getenv('Token'))
