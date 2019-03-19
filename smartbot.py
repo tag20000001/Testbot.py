@@ -281,13 +281,13 @@ async def leave(ctx):
         return
 
 	
-embed=discord.Embed(title="Invite bot from here", description="Invitation link", color=0x00ff00)
+inv_embed=discord.Embed(title="Invite bot from here", description="Invitation link", color=0x00ff00)
 embed.add_field(name="Click here", value="https://discordapp.com/api/oauth2/authorize?client_id=556485152486981642&permissions=8&scope=bot")
 
-
+#invite command
 @bot.command(pass_context=True)
-async def inv(ctx):
-	await bot.say(embed=embed)
+async def invite(ctx):
+	await bot.say(embed=inv_embed)
 	return
 #Shut down command
 @bot.command(pass_context=True)  
