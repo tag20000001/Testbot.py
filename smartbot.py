@@ -289,7 +289,7 @@ inv_embed.add_field(name="Click here", value="https://discordapp.com/api/oauth2/
 async def invite(ctx):
 	await bot.say(embed=inv_embed)
 	return
-#Shut down command
+'''#Shut down command
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)
 async def shutdown(ctx):
@@ -298,6 +298,6 @@ async def shutdown(ctx):
 	await bot.say(embed=msg_embed)
 	await bot.say(embed=msg_embed)
 	await bot.close()
-	return
+	return'''
       
 bot.run(os.getenv('Token'))
