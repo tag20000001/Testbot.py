@@ -88,9 +88,9 @@ async def clear(ctx, number):
         
     try:
         await bot.delete_messages(mgs)
-	a=await bot.say(str(number)+' messages deleted')
-	await asyncio.sleep(5)
-	await bot.delete_message(a)
+        a=await bot.say(str(number)+' messages deleted')
+        await asyncio.sleep(5)
+        await bot.delete_message(a)
     except discord.Forbidden:
         await bot.say(embed=Forbidden)
         return
@@ -98,8 +98,6 @@ async def clear(ctx, number):
         await bot.say('clear failed.')
         return			
 	
-
-    await bot.delete_messages(mgs)   	
 
 	#mute command	
 @bot.command(pass_context=True)
