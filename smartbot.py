@@ -9,7 +9,7 @@ import os
 
 import youtube_dl
 import ffmpeg
-startup_extensions = {"Music"}
+#startup_extensions = {"Music"}
 print('=========================================')
 print('#Information: ')
 logging.basicConfig(level=logging.INFO)
@@ -308,12 +308,12 @@ async def shutdown(ctx):
 	
 	
 
-for extension in startup_extensions:
+'''for extension in startup_extensions:
 	try:
 		bot.load_extension(extension)
 	except Exception as e:
 		exc = '{} : {}'.format(type(e),e)
-		print('Failed to load extension {}\n{}'.format(extension, exc) )
+		print('Failed to load extension {}\n{}'.format(extension, exc) )'''
 		
 		
 bot.run(os.getenv('Token'))
