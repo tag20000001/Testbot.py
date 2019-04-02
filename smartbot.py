@@ -5,6 +5,7 @@ from discord.ext import commands
 from discord.voice_client import VoiceClient
 import time
 import logging
+import os
 
 import youtube_dl
 import ffmpeg
@@ -311,10 +312,9 @@ for extension in startup_extensions:
 	try:
 		bot.load_extension(extension)
 	except Exception as e:
-		exc = '{} : {}'.format(type(e),e)
+		exc = '{} : {}'.format(type(e)._name_,e)
 		print('Failed to load extension {}\n{}'.format(extension, exc) )
-
-
+		
 		
 bot.run(os.getenv('Token'))
 				
