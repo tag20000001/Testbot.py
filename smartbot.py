@@ -306,15 +306,12 @@ async def shutdown(ctx):
 	return'''
 	
 	
-if _name_ == "_main_":
-	for extensions in startup_extensions:
-		try:
-			bot.load_extension(extension)
-		except Exception as e:
-			exc = '{} : [ }'.format(type(e)._name_, e)
-			print('Failed to load extension {}\n{}'.format(extension, exc) )
-
-	
+for extension in startup_extensions:
+	try:
+		bot.load_extension(extension)
+	except Exception as e:
+		exc = '{} : {}'.format(type(e)._name_, e)
+		print('Failed to load extension {}\n{}'.format(extension, exc) )
 		
 bot.run(os.getenv('Token'))
 				
