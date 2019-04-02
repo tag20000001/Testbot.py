@@ -310,7 +310,7 @@ for extension in startup_extensions:
 	try:
 		bot.load_extension(extension)
 	except Exception as e:
-		exc = '{} : {}'.format(type(e)._name_, e)
+		exc = '{} : {}'.format(type(e). e)
 		print('Failed to load extension {}\n{}'.format(extension, exc) )
 		
 bot.run(os.getenv('Token'))
