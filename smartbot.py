@@ -5,7 +5,7 @@ from discord.ext import commands
 from discord.voice_client import VoiceClient
 import time
 import logging
-import opuslib
+
 import youtube_dl
 import ffmpeg
 startup_extensions = {"Music"}
