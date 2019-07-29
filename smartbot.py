@@ -225,7 +225,7 @@ async def ping(ctx):
     await bot.say("Ping: {}ms".format(round((t2-t1)*1000)))
     return
 
-'''#join command
+#join command
 @bot.command(pass_context=True)
 async def join(ctx):
     if ctx.message.author.server_permissions.kick_members:
@@ -284,7 +284,7 @@ async def leave(ctx):
         return
     except discord.HTTPException:
         await bot.say('leave failed.')
-        return'''
+        return
 
 	
 inv_embed=discord.Embed(title="Invite bot from here", description="Invitation link", color=0x00ff00)
@@ -295,7 +295,7 @@ inv_embed.add_field(name="Click here", value="https://discordapp.com/api/oauth2/
 async def invite(ctx):
 	await bot.say(embed=inv_embed)
 	return
-'''#Shut down command
+#Shut down command
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)
 async def shutdown(ctx):
@@ -304,7 +304,7 @@ async def shutdown(ctx):
 	await bot.say(embed=msg_embed)
 	await bot.say(embed=msg_embed)
 	await bot.close()
-	return'''
+	return
 	
 	
 
