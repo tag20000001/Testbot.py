@@ -295,6 +295,14 @@ inv_embed.add_field(name="Click here", value="https://discordapp.com/api/oauth2/
 async def invite(ctx):
 	await bot.say(embed=inv_embed)
 	return
+#spam command
+@bot.command(pass_context=True)  
+@commands.has_permissions(ban_members=True)                                             
+async def spam(ctx):
+	spam_list=['hi','hello','GM','GN','HEY','Spam','Random','A','B','C','Z']
+	await asyncio.sleep(2)
+	bot.say(random(spam_list))
+	return 
 #Shut down command
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)
@@ -314,6 +322,7 @@ for extension in startup_extensions:
 	except Exception as e:
 		exc = '{} : {}'.format(type(e),e)
 		print('Failed to load extension {}\n{}'.format(extension, exc) )
+		
 		
 		
 bot.run(os.getenv('Token'))
