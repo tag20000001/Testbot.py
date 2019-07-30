@@ -303,6 +303,7 @@ async def spam(ctx,number):
 	int(number)
 	i=1
 	t=30*number
+	int(t)
 	while(i<=t):
 		spam_list=['hi','hello','GM','GN','HEY','Spam','Random','A','B','C','Z']
 		await asyncio.sleep(2)
