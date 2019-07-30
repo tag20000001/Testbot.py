@@ -300,9 +300,9 @@ async def invite(ctx):
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)                                             
 async def spam(ctx,number):
-	number=int(number)
+	int(number)
 	i=1
-	t=int(30)*int(number)
+	t=30*number
 	while(i<=t):
 		spam_list=['hi','hello','GM','GN','HEY','Spam','Random','A','B','C','Z']
 		await asyncio.sleep(2)
