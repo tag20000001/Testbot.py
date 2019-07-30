@@ -53,8 +53,13 @@ async def say(ctx, *, msg = None):
 	if not msg: await bot.say("Please specify a message to send")
 	else: await bot.say(embed=speech)
 	return
-    
-    
+@bot.command(pass_context = True)
+async def say1(ctx, *, msg = None):
+	await bot.delete_message(ctx.message)
+	if not msg: await bot.say("Please specify a message to send")
+	else: await bot.say(msg)
+	return
+      
     															
     																																													
 #kick command.        
@@ -302,7 +307,7 @@ async def invite(ctx):
 async def spam(ctx,number):
 	int(number)
 	i=1
-	t=30*number
+	t=30*int(number)
 	while(i<=int(t)):
 		spam_list=['hi','hello','GM','GN','HEY','Spam','Random','A','B','C','Z']
 		await asyncio.sleep(2)
