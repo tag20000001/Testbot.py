@@ -301,7 +301,7 @@ async def invite(ctx):
 async def spam(ctx):
 	spam_list=['hi','hello','GM','GN','HEY','Spam','Random','A','B','C','Z']
 	await asyncio.sleep(2)
-	bot.say(random(spam_list))
+	bot.say(random.choice(spam_list))
 	return 
 #Shut down command
 @bot.command(pass_context=True)  
