@@ -299,11 +299,16 @@ async def invite(ctx):
 #spam command
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)                                             
-async def spam(ctx):
-	spam_list=['hi','hello','GM','GN','HEY','Spam','Random','A','B','C','Z']
-	await asyncio.sleep(2)
-	await bot.say(random.choice(spam_list))
-	return 
+async def spam(ctx,number):
+	number=int(number)
+	i=1
+	t=int(30)*int(number)
+	while(i<=t):
+		spam_list=['hi','hello','GM','GN','HEY','Spam','Random','A','B','C','Z']
+		await asyncio.sleep(2)
+		await bot.say(random.choice(spam_list))
+		i=i+1
+		return 
 #Shut down command
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)
