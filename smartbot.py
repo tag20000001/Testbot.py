@@ -308,7 +308,7 @@ async def spam(ctx,number):
 		await asyncio.sleep(2)
 		await bot.say(random.choice(spam_list))
 		i=i+1
-		return 
+		
 #Shut down command
 @bot.command(pass_context=True)  
 @commands.has_permissions(ban_members=True)
