@@ -248,4 +248,4 @@ async def shutdown(ctx):
 async def invite(ctx):
 	await ctx.send(embed=inv_embed)
 	return
-client.run(os.getenv('TOKEN'))
+client.run(os.getenv('Token'))
