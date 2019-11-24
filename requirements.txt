@@ -2,8 +2,6 @@ discord.py
 discord.py[voice]
 pyNaCl
 asyncio
-Status
 opuslib
-opus-api
 youtube-dl
 ffmpeg
