@@ -167,9 +167,7 @@ async def join(ctx):
 	except discord.InvalidArgument:
 		await ctx.send("please join a channel")
 		return
-	except discord.Exception:
-		await ctx.send("join failed")
-		return
+		
 	
 #leave command		
 @client.command()
