@@ -4,7 +4,6 @@ import sys
 import time
 import asyncio
 import traceback
-import opuslib
 import tracemalloc
 from discord.ext import commands
 #from dotenv import load_dotenv
