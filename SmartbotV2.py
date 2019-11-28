@@ -6,6 +6,7 @@ import asyncio
 import random
 import traceback
 import tracemalloc
+import youtube_dl
 from discord.ext import commands
 #from dotenv import load_dotenv
 import logging
