@@ -16,7 +16,7 @@ client= commands.Bot(command_prefix='.')
 async def on_ready():
     
     print('============================================================================')
-    print('We have logged in as {0.user}'.format(client))
+  
     print ('bot is online.')
 @client.event
 async def on_message(message):
