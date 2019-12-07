@@ -28,6 +28,8 @@ async def on_message(message):
 	emj=[':ok_hand:',':thumbsup:']
 	if message.author == client.user:
 		return
+	elif message.content.startswith('.'):
+		return
 	elif 'hi' in message.content or 'hello' in message.content or 'Yo <@556485152486981642>' in message.content or 'hey' in message.content or 'Hi' in message.content or 'Hello' in message.content or 'Yo <@556485152486981642>'  in message.content or '<@556485152486981642>Yo' in message.content or '<@556485152486981642>yo'  in message.content  or '<@556485152486981642> Yo' in message.content or '<@556485152486981642> yo'  in message.content  or 'Hey' in message.content:
 		msg = await  message.channel.send(embed=discord.Embed(title=random.choice(greetmsg)+user,color=0x00ff00))
 		return
@@ -73,8 +75,7 @@ async def on_message(message):
 		return
 	elif message.content.startswith('.ping'):
 		return
-	elif message.content.startswith('.'):
-		return
+	
 	await client.process_commands(message)
 	
 	
