@@ -70,9 +70,8 @@ async def on_message(message):
 	elif 'fine' in message.content or 'Fine' in message.content or 'well' in message.content or 'Well' in message.content or 'good' in message.content or 'Good' in message.content:
 		await message.add_reaction('👍')
 		return
-	
-	
-      
+	elif message.content.startswith('.'):
+		return
 	await client.process_commands(message)
 		
 #say command
