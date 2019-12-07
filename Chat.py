@@ -51,30 +51,6 @@ async def on_message(message):
 	elif 'fine' in message.content or 'Fine' in message.content or 'well' in message.content or 'Well' in message.content or 'good' in message.content or 'Good' in message.content:
 		await message.add_reaction('👍')
 		return
-	elif message.content.startswith('.say'):
-		return
-	elif message.content.startswith('.mute'):
-		return
-	elif message.content.startswith('.kick'):
-		return
-	elif message.content.startswith('.clear'):
-		return
-	elif message.content.startswith('.vocal'):
-		return
-	elif message.content.startswith('.join'):
-		return
-	elif message.content.startswith('.ban'):
-		return
-	elif message.content.startswith('.bans'):
-		return
-	elif message.content.startswith('.unban'):
-		return
-	elif message.content.startswith('.invite'):
-		return
-	elif message.content.startswith('.leave'):
-		return
-	elif message.content.startswith('.ping'):
-		return
 	
 	await client.process_commands(message)
 	
