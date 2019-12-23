@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO)
 tracemalloc.start()
 
 client = discord.Client()
-client= commands.Bot(command_prefix='.')
+client= commands.Bot(command_prefix=',')
 
 #Common Messages
 
