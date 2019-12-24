@@ -37,12 +37,6 @@ async def on_message(message):
 		return
 	elif message.author.id == '365975655608745985':
 		return
-	elif message.author == bot.user:
-		return
-	elif message.author == Client.user:
-		return
-	elif message.author == Bot.user:
-		return
 	elif message.content.startswith(','):
 		return
 	elif message.content.startswith('.'):
