@@ -28,6 +28,12 @@ async def on_message(message):
 	emj=[':ok_hand:',':thumbsup:']
 	if message.author == client.user:
 		return
+	if message.author == bot.user:
+		return
+	if message.author == Client.user:
+		return
+	if message.author == Bot.user:
+		return
 	elif message.content.startswith(','):
 		return
 	elif message.content.startswith('.'):
@@ -84,6 +90,15 @@ async def on_message(message):
 		return
 	elif 'bye' in message.content or 'Bye' in message.content or 'Bye <@556485152486981642>' in message.content or 'BYE' in message.content or 'see you' in message.content or 'See you' in message.content or 'Bye <@556485152486981642>'  in message.content or '<@556485152486981642>Bye' in message.content or '<@556485152486981642>bye'  in message.content  or '<@556485152486981642> Bye' in message.content or '<@556485152486981642> bye'  in message.content:
 		msg = await  message.channel.send(embed=discord.Embed(title=random.choice(byemsg)+user,color=0x00ff00))
+		return
+	elif 'Gm' in message.content or 'gm' in message.content or'Good Morning' in message.content or 'good morning' in message.content:
+		msg = await  message.channel.send(embed=discord.Embed(title="Good Morning"+user,color=0x00ff00))
+		return
+	elif 'Gn' in message.content or 'gn' in message.content or'Good Night' in message.content or 'good night' in message.content:
+		msg = await  message.channel.send(embed=discord.Embed(title="Good Night"+user,color=0x00ff00))
+		return
+	elif 'Good Evening' in message.content or 'Good evening' in message.content or 'good evening' in message.content or 'GOOD EVENING' in message.content or 'good Evening' in message.content or '' in message.content or 'Good Evening <@556485152486981642>'  in message.content or '<@556485152486981642>good evening' in message.content or '<@556485152486981642>Good Evening'  in message.content  or '<@556485152486981642> good evening' in message.content or '<@556485152486981642>GOOD EVENING'  in message.content:
+		msg = await  message.channel.send(embed=discord.Embed(title="Good Evening"+user,color=0x00ff00))
 		return
 	elif 'Not fine' in message.content or 'not fine' in message.content or 'Not well' in message.content or 'not well' in message.content or 'Not good' in message.content or 'not good' in message.content or 'tired' in message.content or 'Tired' in message.content or 'sick' in message.content or 'Sick' in message.content:
 		await message.add_reaction('😔')
