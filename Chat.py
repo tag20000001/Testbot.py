@@ -31,6 +31,12 @@ async def on_message(message):
 	emj=[':ok_hand:',':thumbsup:']
 	if message.author == client.user:
 		return
+	elif message.author == '155149108183695360':
+		return
+	elif message.author == '235088799074484224':
+		return
+	elif message.author == '365975655608745985':
+		return
 	elif message.author == bot.user:
 		return
 	elif message.author == Client.user:
