@@ -31,11 +31,11 @@ async def on_message(message):
 	emj=[':ok_hand:',':thumbsup:']
 	if message.author == client.user:
 		return
-	elif message.author == '155149108183695360':
+	elif message.author.id == '155149108183695360':
 		return
-	elif message.author == '235088799074484224':
+	elif message.author.id == '235088799074484224':
 		return
-	elif message.author == '365975655608745985':
+	elif message.author.id == '365975655608745985':
 		return
 	elif message.author == bot.user:
 		return
@@ -106,7 +106,7 @@ async def on_message(message):
 	elif 'Gn' in message.content or 'gn' in message.content or'Good Night' in message.content or 'good night' in message.content:
 		msg = await  message.channel.send(embed=discord.Embed(title="Good Night"+user,color=0x00ff00))
 		return
-	elif 'Good Evening' in message.content or 'Good evening' in message.content or 'good evening' in message.content or 'GOOD EVENING' in message.content or 'good Evening' in message.content or '' in message.content or 'Good Evening <@556485152486981642>'  in message.content or '<@556485152486981642>good evening' in message.content or '<@556485152486981642>Good Evening'  in message.content  or '<@556485152486981642> good evening' in message.content or '<@556485152486981642>GOOD EVENING'  in message.content:
+	elif 'Good Evening' in message.content or 'Good evening' in message.content or 'good evening' in message.content or 'GOOD EVENING' in message.content or 'good Evening' in message.content or 'GOOd EvEning' in message.content or 'Good Evening <@556485152486981642>'  in message.content or '<@556485152486981642>good evening' in message.content or '<@556485152486981642>Good Evening'  in message.content  or '<@556485152486981642> good evening' in message.content or '<@556485152486981642>GOOD EVENING'  in message.content:
 		msg = await  message.channel.send(embed=discord.Embed(title="Good Evening"+user,color=0x00ff00))
 		return
 	elif 'Not fine' in message.content or 'not fine' in message.content or 'Not well' in message.content or 'not well' in message.content or 'Not good' in message.content or 'not good' in message.content or 'tired' in message.content or 'Tired' in message.content or 'sick' in message.content or 'Sick' in message.content:
