@@ -12,6 +12,9 @@ print('=========================================')
 print('#Information: ')
 client = discord.Client()
 client= commands.Bot(command_prefix='.')
+bot=client
+Bot=client
+Client=client
 @client.event
 async def on_ready():
     
