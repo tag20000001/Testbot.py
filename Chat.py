@@ -30,6 +30,48 @@ async def on_message(message):
 		return
 	elif message.content.startswith(','):
 		return
+	elif message.content.startswith('.'):
+		return
+	elif message.content.startswith('!'):
+		return
+	elif message.content.startswith('+'):
+		return
+	elif message.content.startswith('×'):
+		return
+	elif message.content.startswith('÷'):
+		return
+	elif message.content.startswith('='):
+		return
+	elif message.content.startswith('/'):
+		return
+	elif message.content.startswith('_'):
+		return
+	elif message.content.startswith('$'):
+		return
+	elif message.content.startswith('%'):
+		return
+	elif message.content.startswith('&'):
+		return
+	elif message.content.startswith('-'):
+		return
+	elif message.content.startswith('"'):
+		return
+	elif message.content.startswith('*'):
+		return
+	elif message.content.startswith(':'):
+		return
+	elif message.content.startswith(':'):
+		return
+	elif message.content.startswith(';'):
+		return
+	elif message.content.startswith('?'):
+		return
+	elif message.content.startswith('p!'):
+		return
+	elif message.content.startswith('mv!'):
+		return
+	elif message.content.startswith('h!'):
+		return
 	elif 'hi' in message.content or 'hello' in message.content or 'Yo <@556485152486981642>' in message.content or 'hey' in message.content or 'Hi' in message.content or 'Hello' in message.content or 'Yo <@556485152486981642>'  in message.content or '<@556485152486981642>Yo' in message.content or '<@556485152486981642>yo'  in message.content  or '<@556485152486981642> Yo' in message.content or '<@556485152486981642> yo'  in message.content  or 'Hey' in message.content:
 		msg = await  message.channel.send(embed=discord.Embed(title=random.choice(greetmsg)+user,color=0x00ff00))
 		return
