@@ -4,6 +4,7 @@ import sys
 import time
 import asyncio
 import random
+import opuslib
 import traceback
 import tracemalloc
 import youtube_dl
