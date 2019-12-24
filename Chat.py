@@ -55,6 +55,16 @@ async def on_message(message):
 	
 	await client.process_commands(message)
 	
+#Shut down command
+@client.command(pass_context=True)  
+@commands.has_permissions(ban_members=True)
+async def turnoffchat(ctx):
+	msg="chat is turned off\nBye :check:"
+	msg_embed=discord.Embed(title="Turning off...", description=msg,color=0x00ff00)
+	await ctx.send(embed=msg_embed)
+	await client.close()
+	return
+	
 	
 client.run(os.getenv('Token'))
   
