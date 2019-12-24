@@ -28,11 +28,11 @@ async def on_message(message):
 	emj=[':ok_hand:',':thumbsup:']
 	if message.author == client.user:
 		return
-	if message.author == bot.user:
+	elif message.author == bot.user:
 		return
-	if message.author == Client.user:
+	elif message.author == Client.user:
 		return
-	if message.author == Bot.user:
+	elif message.author == Bot.user:
 		return
 	elif message.content.startswith(','):
 		return
