@@ -42,10 +42,10 @@ async def on_ready():
 #say command
 @client.command(pass_context = True)
 async def say(ctx, *, msg = None):
-	speech= discord.Embed(title=" ", description=msg,color=0x00ff00)
+	#speech= discord.Embed(title=" ", description=msg,color=0x00ff00)
 	await ctx.message.delete()
 	if not msg: await ctx.send("Please specify a message to send")
-	else: await ctx.send(embed=speech)
+	else: await ctx.send(msg)
 	return
 	
 #kick command.        
